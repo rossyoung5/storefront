@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :brands
-  resources :products
-  resources :categories
+
+  namespace :admin do
+    resources :brands
+    resources :products
+    resources :categories
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
