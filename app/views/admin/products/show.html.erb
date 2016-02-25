@@ -1,34 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container-fluid">
+  <h2><%= @product.name %></h2>
+  <p>
+    <strong>Current price:</strong>
+    <%= @product.current_price %>
+  </p>
 
-<p>
-  <strong>Current price:</strong>
-  <%= @product.current_price %>
-</p>
+  <p>
+    <strong>Quantity:</strong>
+    <%= @product.quantity %>
+  </p>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @product.quantity %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <p>
+    <strong>Brand:</strong>
+    <%= @product.brand %>
+  </p>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @product.brand %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  <p>
+    <strong>Category:</strong>
+    <%= @product.category %>
+  </p>
+</div>
+<%= link_to 'Edit', edit_admin_product_path(@product) %> |
+<%= link_to 'Back', admin_products_path %>
