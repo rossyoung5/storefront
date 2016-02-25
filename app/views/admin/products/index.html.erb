@@ -5,6 +5,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th> </th>
       <th>Name</th>
       <th>Current price</th>
       <th>Quantity</th>
@@ -16,17 +17,18 @@
   </thead>
 
   <tbody>
-    <% @products.each do |admin_product| %>
+    <% @products.each do |product| %>
       <tr>
-        <td><%= admin_product.name %></td>
-        <td><%= admin_product.current_price %></td>
-        <td><%= admin_product.quantity %></td>
-        <td><%= admin_product.description %></td>
-        <td><%= admin_product.try(:brand) %></td>
-        <td><%= admin_product.try(:category) %></td>
-        <td><%= link_to 'Show', admin_product_path(admin_product) %></td>
-        <td><%= link_to 'Edit', edit_admin_product_path(admin_product) %></td>
-        <td><%= link_to 'Destroy', admin_product_path(admin_product), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag product.avatar.url(:thumb) %>
+        <td><%= product.name %></td>
+        <td><%= product.current_price %></td>
+        <td><%= product.quantity %></td>
+        <td><%= product.description %></td>
+        <td><%= product.try(:brand) %></td>
+        <td><%= product.try(:category) %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
