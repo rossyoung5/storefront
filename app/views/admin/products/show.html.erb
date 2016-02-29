@@ -5,7 +5,11 @@
   </div>
   <h2><%= @product.name %></h2>
   <p>
-    <strong>Current price:</strong>
+    By <strong><%= @product.brand.try(:name) %></strong>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
     <%= number_to_currency @product.current_price %>
   </p>
 
