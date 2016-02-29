@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get '/index' => 'page#index'
+  get '/about' => 'page#about'
 
   namespace :admin do
     resources :brands
