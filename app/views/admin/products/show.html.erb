@@ -8,25 +8,20 @@
     By <strong><%= @product.brand.try(:name) %></strong>
   </p>
 
-  <p>
-    <strong>Price:</strong>
-    <%= number_to_currency @product.current_price %>
-  </p>
+  <h4>
+    Price: <strong id="prices"><%= number_to_currency @product.current_price %></strong>
+  </h4>
 
-  <p>
+<!--   <p>
     <strong>Quantity:</strong>
     <%= @product.quantity %>
   </p>
+ -->
+  <p><strong>About <%= @product.name %>:</strong></p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </p>
-
-  <p>
-    <strong>Brand:</strong>
-    <%= @product.brand.try(:name) %>
-  </p>
+  <div class="well well-sm">
+  <%= @product.description %>
+  </div>
 
   <p>
     <strong>Category:</strong>
