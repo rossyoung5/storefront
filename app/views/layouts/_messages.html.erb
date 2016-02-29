@@ -1,4 +1,9 @@
-
-<p class="notice"><%= notice %></p>
-
-<p class="alert"><%= alert %></p>
+<% if notice %>
+<div class="alert alert-success" role="alert">
+  <p><%= notice %></p>
+</div>
+<% elsif alert %>
+<div class="alert alert-warning" role="alert">
+  <p><%= alert %></p>
+</div>
+<% end %>
