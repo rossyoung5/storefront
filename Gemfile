@@ -62,6 +62,7 @@ group :development do
   gem 'annotate'
   gem 'faker'
   gem 'populator'
+  gem 'bullet'
 
 end
 

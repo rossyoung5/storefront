@@ -1,9 +1,10 @@
 <span class="pull-right">
   <%= form_tag(shop_path, method: :get, role: "search", class:"form-inline") do %>
     <div class="form-group">
-      <%= label_tag fa_icon('search') %>
+      <!-- <%= label_tag fa_icon('search') %> -->
+      <i class="fa fa-search fa-lg"></i>
       <%= text_field_tag(:search, nil, placeholder: "Search Store", class: "form-control input-sm") %>
     </div>
-    <%= submit_tag("Search", class: "btn btn-primary btn-sm") %>
+    <%= submit_tag("Search", class: "btn btn-primary btn-sm", id: "search_button") %>
   <% end %>
 </span>

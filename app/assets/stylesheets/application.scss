@@ -16,9 +16,68 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
 
-#prices {
-  color: #d80000;
+/* Colors */
+$lightblue: #4ECDC4;
+$darkblue: #1A535C;
+$offwhite: #F7FFF7;
+$yellow: #F0CE4F;
+$red: #FF6B6B;
+
+/* Fonts */
+$bodyfont: 'Lato', sans-serif;
+
+.navbar {
+  background-color: $darkblue;
+  border-radius: 0px;
+  border:none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: $offwhite;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #ADB2AD;
+}
+
+body{
+  background-color: $lightblue;
+  font-family: $bodyfont;
+}
+
+.panel {
+  background-color: $offwhite;
+}
+
+.modal-content{
+  background-color: $offwhite;
+}
+
+#info_button {
+  background-color: $yellow;
+  border: 1px $yellow solid;
+}
+
+#info_button:hover {
+  background-color: #B2A14C;
+  border: 1px #B2A14C solid;
+}
+
+#search_button{
+  background-color: $red;
+  border: 1px $red solid;
+}
+
+#search_button:hover{
+  background-color: #CC5555;
+  border: 1px #CC5555 solid;
+}
+
+.prices {
+  color: $red;
+  font-weight: 700;
 }
 
 .jumbotron {
