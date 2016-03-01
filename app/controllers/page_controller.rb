@@ -1,4 +1,7 @@
 class PageController < ApplicationController
+  def home
+  end
+
   def index
     if params[:search]
       @products=Product.search_by_name_or_desc(params[:search])
