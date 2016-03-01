@@ -23,4 +23,8 @@ class Product < ActiveRecord::Base
 #     t.integer  "avatar_file_size"
 #     t.datetime "avatar_updated_at
 
+  def self.search_by_name_or_desc(string)
+    where("name LIKE ? OR description LIKE ?", "%#{string}%", "%#{string}%")
+  end
+
 end
