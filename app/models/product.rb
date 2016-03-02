@@ -2,6 +2,9 @@ class Product < ActiveRecord::Base
   belongs_to :brand
   belongs_to :category
 
+  has_many :line_items
+  before_destroy :ensure_not_referenced_by_line_items
+
   has_attached_file :avatar, styles: { large: "500x500#", medium: "300x300#", thumb: "100x100#" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
@@ -25,6 +28,21 @@ class Product < ActiveRecord::Base
 
   def self.search_by_name_or_desc(string)
     where("name LIKE ? OR description LIKE ?", "%#{string}%", "%#{string}%")
+  end
+
+  def self.featured
+    all.sample(3)
+  end
+
+  private
+
+  def ensure_not_referenced_by_line_items
+    if line_items.empty?
+      return true
+    else
+      errors.add(:base, "Cannot delete. This product has line items present in orders")
+      return false
+    end
   end
 
 end
