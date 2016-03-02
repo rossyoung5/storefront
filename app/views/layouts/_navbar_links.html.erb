@@ -26,6 +26,7 @@
         </li>
 
         <% if user_signed_in? %>
+          <li><%= link_to fa_icon('shopping-cart', text:'Cart'), edit_cart_path %></li>
           <li><%= link_to fa_icon('gear', text:'Your Account'), edit_user_registration_path %></li>
           <li><%= link_to fa_icon('sign-out', text:'Log Out'), destroy_user_session_path, method: :delete %></li>
         <% else %>

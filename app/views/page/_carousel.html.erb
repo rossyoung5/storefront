@@ -10,9 +10,9 @@
   <%= @featured_products.each do |featured| %>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="..." alt="...">
+      <%= image_tag featured.avatar.url(:thumb) %>
       <div class="carousel-caption">
-        ...
+        <%= featured.name %>
       </div>
     </div>
     <% end %>
