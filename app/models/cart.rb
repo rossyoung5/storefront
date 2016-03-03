@@ -11,12 +11,13 @@ class Cart < ActiveRecord::Base
     line_items.select("SUM(quantity * price) as sum")[0].sum
   end
 
-  def tax
-    subtotal * 0.09
-  end
+  # def tax
+  #   subtotal * 0.09
+  # end
 
   def total
-    subtotal + tax
+    subtotal
+    # + tax
   end
 
 end

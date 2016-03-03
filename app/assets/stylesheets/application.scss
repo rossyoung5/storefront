@@ -47,6 +47,14 @@ body{
   font-family: $bodyfont;
 }
 
+.carousel-inner > .item > a > img {
+    margin: 0 auto;
+}
+
+.carousel-inner > .item > a {
+    margin: 0 auto;
+}
+
 .panel {
   background-color: $offwhite;
 }
