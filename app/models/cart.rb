@@ -20,4 +20,20 @@ class Cart < ActiveRecord::Base
     # + tax
   end
 
+# Finds if product is already in cart
+  def add_product(product_id)
+    product = Product.find(product_id)
+    current_item = line_items.find_by(product_id: product_id)
+
+    #If current_item is there, increase quantity. If not, build new line item
+    if current_item
+      current_item.quantity += 1
+      else
+        current_item = line_items.build(product: product, price: product.current_price)
+    end
+
+    current_item
+
+  end
+
 end
