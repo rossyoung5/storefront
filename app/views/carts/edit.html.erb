@@ -1,0 +1,8 @@
+<h1>Your Cart</h1>
+
+<%= render @cart %>
+
+<%= link_to "Continue shopping", shop_path, class:"btn btn-success" %>
+<%= link_to "Empty the cart", @cart, method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-danger" %>
+
+<%= link_to link_to fa_icon('shopping-cart', text:'Checkout'), new_order_path, class:"btn btn-primary btn-lg", id: "info_button" %>

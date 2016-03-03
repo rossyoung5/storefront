@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   get '/home' => 'page#home'
   get '/shop' => 'page#index'
@@ -9,6 +10,13 @@ Rails.application.routes.draw do
     resources :products
     resources :categories
   end
+
+  resources :line_items, only: [:create]
+
+  #changed from "resources" to "resource" so id param is not in URL; either BOTH are plural (resources :carts) or NEITHER is plural (resource :cart)
+  resource :cart, only: [:edit, :update, :destroy]
+
+  resources :orders, only: [:new, :create, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

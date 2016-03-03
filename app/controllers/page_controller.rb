@@ -1,5 +1,6 @@
 class PageController < ApplicationController
   def home
+    @featured_products = Product.featured
   end
 
   def index

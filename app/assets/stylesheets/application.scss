@@ -47,6 +47,14 @@ body{
   font-family: $bodyfont;
 }
 
+.carousel-inner > .item > a > img {
+    margin: 0 auto;
+}
+
+.carousel-inner > .item > a {
+    margin: 0 auto;
+}
+
 .panel {
   background-color: $offwhite;
 }
@@ -82,4 +90,17 @@ body{
 
 .jumbotron {
   margin-top: -20px;
+}
+
+.well, #order_well {
+  background-color: $darkblue;
+  border: 1px solid $darkblue;
+}
+
+.well, #order_well > h3 {
+  color: #fdfdfd;
+}
+
+div > #shipped_to {
+  padding-bottom: 50px;
 }
