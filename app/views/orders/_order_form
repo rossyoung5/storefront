@@ -1,0 +1,13 @@
+<%= simple_form_for(@order) do |order_field| %>
+  <%= order_field.error_notification %>
+
+  <div class="form-inputs">
+    <%= order_field.input :shipping_name %>
+    <%= order_field.input :shipping_address %>
+    <%= order_field.input :payment_type, collection: Order::PAYMENT_TYPES %>
+  </div>
+
+  <div class="form-actions">
+    <%= order_field.button :submit %>
+  </div>
+<% end %>

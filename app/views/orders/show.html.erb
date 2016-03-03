@@ -1,0 +1,9 @@
+<h1>Order Number: <%= @order.id %></h1>
+
+<%= render @order %>
+
+<div class="container-fluid" id="shipped_to">
+<h3>Shipped To</h3>
+<strong>Name:</strong> <%= @order.shipping_name %><br>
+<strong>Address:</strong> <%= @order.shipping_address %><br>
+</div>

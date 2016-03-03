@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-5">
+    <h2>Provide Order Information</h2>
+    <%= render 'order_form' %>
+  </div>
+  <div class="col-sm-7">
+    <div class="well" id="order_well">
+      <h3>Order Items</h3>
+      <%= render @cart %>
+    </div>
+  </div>
+</div>
