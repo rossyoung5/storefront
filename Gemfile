@@ -41,6 +41,7 @@ gem 'simple_form'
 gem 'paperclip', '~> 4.3'
 gem 'devise'
 gem 'kaminari'
+gem 'figaro'
 
 group :production do
   gem 'pg'

@@ -18,3 +18,5 @@
 
 # Ignore all avatar photos (only in development)
 /public/system/products/avatars
+# Ignore application configuration
+/config/application.yml
