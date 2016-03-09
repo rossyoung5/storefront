@@ -10,12 +10,12 @@
   <div class="carousel-inner" role="listbox">
     <% @featured_products.each_with_index do |featured, index| %>
      <div class="item <%= 'active' if index == 0 %> text-center">
-      <%=link_to (image_tag featured.avatar.url(:medium)), shop_path%>
+      <%= link_to (image_tag featured.avatar.url(:medium)), product_path(featured.id) %>
       <div class="carousel-caption">
         <%= featured.name %>
       </div>
     </div>
-  <% end %>
+    <% end %>
   </div>
 
   <!-- Controls -->

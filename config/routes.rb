@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   get '/home' => 'page#home'
   get '/shop' => 'page#index'
+  get '/product/:id' => 'page#product', as: :product
   get '/about' => 'page#about'
 
   namespace :admin do

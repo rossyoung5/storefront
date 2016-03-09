@@ -21,4 +21,8 @@ class PageController < ApplicationController
   def about
   end
 
+  def product
+    @product = Product.find(params[:id])
+  end
+
 end

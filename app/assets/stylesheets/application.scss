@@ -42,7 +42,7 @@ $bodyfont: 'Lato', sans-serif;
   color: #ADB2AD;
 }
 
-body{
+body {
   background-color: $lightblue;
   font-family: $bodyfont;
 }
@@ -53,6 +53,11 @@ body{
 
 .carousel-inner > .item > a {
     margin: 0 auto;
+}
+
+.carousel-caption {
+  color: $red;
+  font-size: 2.0em;
 }
 
 .panel {

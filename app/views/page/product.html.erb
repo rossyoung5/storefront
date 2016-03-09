@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-7">
+    <%= image_tag @product.avatar.url(:large), class: "img-responsive" %>
+  </div>
+  <div class="col-sm-5">
+    <h3><%= @product.name %></h3>
+    <h4>by <%= @product.brand.try(:name) %></h4>
+    <p><%= @product.description %></p>
+    <h3>Price: <span class="prices"><%= number_to_currency @product.current_price %></span></h3>
+
+    <%= button_to "Add to Cart", line_items_path(product_id: @product.id), class:"btn btn-lg btn-success" %>
+  </div>
+</div>
