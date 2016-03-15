@@ -72,6 +72,7 @@ group :development do
   gem 'faker'
   gem 'populator'
   gem 'bullet'
+  gem 'letter_opener'
 
 end
 
