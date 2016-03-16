@@ -47,17 +47,30 @@ body {
   font-family: $bodyfont;
 }
 
-.carousel-inner > .item > a > img {
-    margin: 0 auto;
-}
+// .carousel-inner > .item > a > img {
+//     margin: 0 auto;
+// }
 
-.carousel-inner > .item > a {
-    margin: 0 auto;
-}
+// .carousel-inner > .item > a {
+//     margin: 0 auto;
+// }
 
-.carousel-caption {
-  color: $red;
-  font-size: 2.0em;
+// .carousel-caption {
+//   color: $red;
+//   font-size: 2.0em;
+// }
+
+.welcome {
+  h1{
+    font-size: 4.5em;
+  }
+  h3{
+    color: #555;
+  }
+  .btn-lg{
+    font-size: 25px;
+    margin-top: 15px;
+  }
 }
 
 .panel {
