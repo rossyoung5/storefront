@@ -54,6 +54,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
   gem 'rspec-rails'
+  gem 'factory_girl_rails', '~> 4.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
@@ -73,6 +74,12 @@ group :development do
   gem 'populator'
   gem 'bullet'
   gem 'letter_opener'
+  gem 'guard-rspec', require: false
+end
 
+group :test do
+ gem 'shoulda-matchers', '~> 3.1'
+ gem 'capybara'
+ gem 'launchy'
 end
 
