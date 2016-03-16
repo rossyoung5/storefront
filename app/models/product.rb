@@ -13,36 +13,36 @@ class Product < ActiveRecord::Base
   validates_numericality_of :current_price, greater_than_or_equal_to: 0.01
 
   validates_numericality_of :quantity, greater_than_or_equal_to: 0
-# t.string   "name"
-#     t.decimal  "current_price"
-#     t.integer  "quantity"
-#     t.text     "description"
-#     t.integer  "brand_id"
-#     t.integer  "category_id"
-#     t.datetime "created_at",          null: false
-#     t.datetime "updated_at",          null: false
-#     t.string   "avatar_file_name"
-#     t.string   "avatar_content_type"
-#     t.integer  "avatar_file_size"
-#     t.datetime "avatar_updated_at
+# # t.string   "name"
+# #     t.decimal  "current_price"
+# #     t.integer  "quantity"
+# #     t.text     "description"
+# #     t.integer  "brand_id"
+# #     t.integer  "category_id"
+# #     t.datetime "created_at",          null: false
+# #     t.datetime "updated_at",          null: false
+# #     t.string   "avatar_file_name"
+# #     t.string   "avatar_content_type"
+# #     t.integer  "avatar_file_size"
+# #     t.datetime "avatar_updated_at
 
   def self.search_by_name_or_desc(string)
     where("name LIKE ? OR description LIKE ?", "%#{string}%", "%#{string}%")
   end
 
-  def self.featured
-    all.sample(3)
-  end
+#   def self.featured
+#     all.sample(3)
+#   end
 
-  private
+#   private
 
-  def ensure_not_referenced_by_line_items
-    if line_items.empty?
-      return true
-    else
-      errors.add(:base, "Cannot delete. This product has line items present in orders")
-      return false
-    end
-  end
+#   def ensure_not_referenced_by_line_items
+#     if line_items.empty?
+#       return true
+#     else
+#       errors.add(:base, "Cannot delete. This product has line items present in orders")
+#       return false
+#     end
+#   end
 
 end

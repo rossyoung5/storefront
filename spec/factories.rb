@@ -8,4 +8,13 @@ FactoryGirl.define do
     name "Jackets"
   end
 
+  factory :product do
+    name "Thing"
+    current_price 10.99
+    quantity 10
+    description "It's a really cool thing."
+    brand
+    category
+  end
+
 end
